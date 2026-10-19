@@ -9,6 +9,11 @@
   --sky-2: #7c5bd8;
 }
 
+[hidden] {
+  display: none !important;
+}
+
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
