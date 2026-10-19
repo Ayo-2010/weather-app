@@ -20,12 +20,11 @@
     <button type="submit" aria-label="Search">🔍</button>
   </form>
 
-  <div class="chips" id="quickChips">
-    <button data-city="London">London</button>
-    <button data-city="New York">New York</button>
-    <button data-city="Tokyo">Tokyo</button>
-    <button data-city="Sydney">Sydney</button>
-    <button data-city="Cairo">Cairo</button>
+  <div class="picker">
+    <label class="picker-label" id="pickerLabel" for="locationSelect">Browse cities</label>
+    <div class="select-wrap">
+      <select id="locationSelect" aria-label="Choose a location"></select>
+    </div>
   </div>
 
   <div class="status" id="status">Enter a city to see the weather.</div>
@@ -65,6 +64,7 @@
 
 <div class="loader" id="loader" hidden><span></span></div>
 
+<script src="locations.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
