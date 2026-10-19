@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skycast — Weather</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="scene" id="scene">
+  <div class="scene-overlay"></div>
+</div>
+
+<main class="weather">
+  <form class="search" id="searchForm">
+    <input type="text" id="cityInput" placeholder="Search a city…" autocomplete="off" spellcheck="false">
+    <button type="submit" aria-label="Search">🔍</button>
+  </form>
+
+  <div class="chips" id="quickChips">
+    <button data-city="London">London</button>
+    <button data-city="New York">New York</button>
+    <button data-city="Tokyo">Tokyo</button>
+    <button data-city="Sydney">Sydney</button>
+    <button data-city="Cairo">Cairo</button>
+  </div>
+
+  <div class="status" id="status">Enter a city to see the weather.</div>
+
+  <section class="current" id="current" hidden>
+    <div class="current-main">
+      <div class="current-left">
+        <h1 id="cityName">—</h1>
+        <p id="localTime" class="local-time"></p>
+        <div class="temp-row">
+          <span class="temp" id="temp">—</span>
+          <span class="unit-toggle">
+            <button class="unit is-active" data-unit="c">°C</button>
+            <button class="unit" data-unit="f">°F</button>
+          </span>
+        </div>
+        <p class="condition" id="condition">—</p>
+      </div>
+      <div class="current-right">
+        <div class="weather-icon" id="weatherIcon">☀️</div>
+        <p class="feels" id="feels">Feels like —</p>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><span class="stat-label">Humidity</span><span class="stat-value" id="humidity">—</span></div>
+      <div class="stat"><span class="stat-label">Wind</span><span class="stat-value" id="wind">—</span></div>
+      <div class="stat"><span class="stat-label">High / Low</span><span class="stat-value" id="highlow">—</span></div>
+    </div>
+
+    <div class="forecast">
+      <h2>7-day forecast</h2>
+      <div class="forecast-row" id="forecastRow"></div>
+    </div>
+  </section>
+</main>
+
+<div class="loader" id="loader" hidden><span></span></div>
+
+<script src="script.js"></script>
+</body>
+</html>
